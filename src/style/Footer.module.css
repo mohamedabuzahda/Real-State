@@ -1,0 +1,46 @@
+
+ .footer{
+    position:relative;
+    top:550px;
+    background-color: #000;
+    color:#fff;
+    width: 100%;
+    height:200px;
+    padding: 50px;
+    
+ }
+ ul{
+    display: flex;
+    list-style: none;
+    justify-content: space-evenly;
+    
+
+}
+a {
+  color: #fff;
+  text-decoration: none;
+  position: relative;
+}
+a::after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 0;
+  height: 2px;
+  background: #fff;
+  transition: width 0.2s;
+}
+a:hover::after {
+  width: 15px;
+}
+
+.copyright {
+    text-align: center;
+    margin-top:100px;
+
+}
+.logo{
+    color:red;
+}
