@@ -1,4 +1,4 @@
-import style from "../style/Home.module.css";
+import "../style/Home.css";
 import { Link } from "react-router-dom";
 import villas1 from "../images/villa-1.jpg";
 import villas2 from "../images/villa-2.jpg";
@@ -36,19 +36,19 @@ export default function Home() {
     });
   }
   return (
-    <div className={style.home}>
-      <div className={style.landing}>
+    <div className={"home"}>
+      <div className={"landing"}>
         <h1>Representing the world’s finest real estate</h1>
         <Link to="/properties">
-          <button className={style.btn17}>
-            <span className={style.textContainer}>
+          <button className={"btn-17"}>
+            <span className={"textContainer"}>
               <span className="text">About Us</span>
             </span>
           </button>
         </Link>
       </div>
-      <div className={style.summary}>
-        <h1 className={style.sectionTitle}>The Evolving World Of Luxury Living</h1>
+      <div className={"summary"}>
+        <h1 className={"section-title"}>The Evolving World Of Luxury Living</h1>
         <p>
           We are a leading real estate agency with a passion for helping our
           clients find their dream homes. Our team of experts is dedicated to
@@ -56,67 +56,67 @@ export default function Home() {
           buying and selling process.
         </p>
       </div>
-      <div className={style.homeProperties}>
-        <Link to="/properties" className={style.project}>
+      <div className={"home-properties"}>
+        <Link to="/properties" className={"project"}>
           <img src={villas1} alt="Property 1" />
           <h1 className="animated-title" id="text-1">
             {animateText(text1)}
           </h1>
           <Link to="/properties">
-            <button className={style.btn17}>
-              <span className={style.textContainer}>
-                <span className={style.text}>View</span>
+            <button className={"btn-17"}>
+              <span className={"text-container"}>
+                <span className={"text"}>View</span>
               </span>
             </button>
           </Link>
         </Link>
-        <Link to="/properties" className={style.project}>
+        <Link to="/properties" className={"project"}>
           <img src={apartments1} alt="Property 1" />
           <h1>{animateText(text2)}</h1>
           <Link to="/properties">
-            <button className={style.btn17}>
-              <span className={style.textContainer}>
-                <span className={style.text}>View</span>
+            <button className={"btn-17"}>
+              <span className={"text-container"}>
+                <span className={"text"}>View</span>
               </span>
             </button>
           </Link>
         </Link>
-        <Link to="/properties" className={style.project}>
+        <Link to="/properties" className={"project"}>
           <img src={apartments2} alt="Property 1" />
           <h1>{animateText(text3)}</h1>
           <Link to="/properties">
-            <button className={style.btn17}>
-              <span className={style.textContainer}>
-                <span className={style.text}>View</span>
+            <button className={"btn-17"}>
+              <span className={"text-container"}>
+                <span className={"text"}>View</span>
               </span>
             </button>
           </Link>
         </Link>
-        <Link to="/properties" className={style.project}>
+        <Link to="/properties" className={"project"}>
           <img src={villas2} alt="Property 1" />
           <h1>{animateText(text4)}</h1>
           <Link to="/properties">
-            <button className={style.btn17}>
-              <span className={style.textContainer}>
-                <span className={style.text}>View</span>
+            <button className={"btn-17"}>
+              <span className={"text-container"}>
+                <span className={"text"}>View</span>
               </span>
             </button>
           </Link>
         </Link>
-        <div className={style.moreContainer}>
+        <div className={"more-container"}>
           <span></span>{" "}
-          <Link to="/properties" className={style.more}>
+          <Link to="/properties" className={"more"}>
             see more Projects
           </Link>
         </div>
       </div>
-      <Link to="/contact" className={style.goContact}>
-        <h1 className={style.sectionTitle}>{animateText(nextProjects)}</h1>
+      <Link to="/contact" className={"go-contact"}>
+        <h1 className={"section-title"}>{animateText(nextProjects)}</h1>
         <h2>Schedule a Private Consultation With Our Experts</h2>
         <Link to="/contact">
-          <button className={style.btn17}>
-            <span className={style.textContainer}>
-              <span className={style.text}>Inquire</span>
+          <button className={"btn-17"}>
+            <span className={"text-container"}>
+              <span className={"text"}>Inquire</span>
             </span>
           </button>
         </Link>
