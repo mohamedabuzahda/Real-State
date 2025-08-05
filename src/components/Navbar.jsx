@@ -14,12 +14,12 @@ const Navbar = () => {
         
     
         <ul>
-            <li><Link to="/">Home</Link></li>
+            
             <li><Link to="/about">About</Link></li>
             <li><Link to="/contact">Contact</Link></li>
             <li><Link to="/Home"><p className={style.logo}>3KAR</p></Link></li>
-            <li><Link to="/dashboard">Dashboard</Link></li>
-            <li><Link to="/products">Products</Link></li>
+            <li><Link to="/dashboard">Department</Link></li>
+            <li><Link to="/products">Villa </Link></li>
             <li><Link to="/cart">Cart</Link></li>
         </ul>
      
