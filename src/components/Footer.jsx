@@ -1,5 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
+
+import { FaCartShopping } from "react-icons/fa6";
 import style from "../style/Footer.module.css"; // Assuming you have a CSS module for styling
 const Footer = () => {
   return (
@@ -18,6 +20,9 @@ const Footer = () => {
           </li>
           <li>
             <Link to="/privacy">Privacy Policy</Link>
+          </li>
+          <li>
+            <Link to="/cart"><FaCartShopping /></Link>
           </li>
         </ul>
         <p className={style.copyright}>
