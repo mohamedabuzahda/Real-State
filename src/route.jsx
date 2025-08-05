@@ -4,8 +4,10 @@ import Home from './pages/Home';
 import About from './pages/About';
 import Contact from './pages/Contact';
 import Dashboard from './pages/Dashboard';
-import Products from './pages/Products';
-import SingleProduct from './pages/SingleProduct';
+import Villa from './pages/Villa';
+import Detailsvilla from './pages/Detailsvilla';
+import Department from './pages/Department';
+import Detailsdepartment from './pages/Detailsdepartment';
 import Cart from './pages/Cart';
 import NotFound from './pages/NotFound';
 import Order from './pages/Order';
@@ -20,8 +22,10 @@ const appRoutes = (
   <Route  path="/about" element={<About />} />,
   <Route  path="/contact" element={<Contact />} />,
   <Route  path="/dashboard" element={<Dashboard />} />,
-  <Route  path="/products" element={<Products />} />,
-  <Route  path="/products/:id" element={<SingleProduct />} />,
+  <Route  path="/villa" element={<Villa />} />,
+  <Route  path="/villa/:id" element={<Detailsvilla />} />,
+  <Route  path="/department" element={<Department />} />,
+  <Route  path="/department/:id" element={<Detailsdepartment />} />,
   <Route  path="/cart" element={<Cart />} />,
   <Route  path="/order" element={<Order />} />,
   <Route  path="/login" element={<Login />} />,

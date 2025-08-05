@@ -1,6 +1,6 @@
 import React from 'react'
 
-const SingleProduct = () => {
+const Detailsvilla = () => {
   return (
     <div>
       <h1>Product Details</h1>
@@ -9,4 +9,4 @@ const SingleProduct = () => {
   )
 }
 
-export default SingleProduct
+export default Detailsvilla;
