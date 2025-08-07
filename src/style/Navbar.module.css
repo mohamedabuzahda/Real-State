@@ -10,6 +10,9 @@
   font-size: 20px;
   
 }
+.logos{
+  display:none;
+}
 
 img {
   width: 80px;
@@ -81,8 +84,15 @@ img {
   .navbarTop {
     text-align:center !important;
   }
+  .logos{
+  display:block;
+  text-align:center;
+  margin-left:100px;
+  
+}
   .menuIcon {
     display: block;
+    margin-left: 100px;
   }
 
   .navContainer {

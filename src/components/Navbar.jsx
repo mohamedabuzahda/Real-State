@@ -18,6 +18,10 @@ const Navbar = () => {
   return (
     <header className={style.header}>
       <div className={style.navbarTop}>
+        
+             <Link to="/home" onClick={handleNavClick}>
+          <img src={logo} alt="Logo" className={style.logos} />
+        </Link>
        
         <button
           className={style.menuIcon}
