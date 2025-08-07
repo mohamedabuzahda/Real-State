@@ -90,6 +90,9 @@ img {
   margin-left:100px;
   
 }
+.logo{
+  display: none;
+}
   .menuIcon {
     display: block;
     margin-left: 100px;
