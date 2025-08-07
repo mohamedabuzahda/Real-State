@@ -1,39 +1,60 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import style from "../style/Navbar.module.css"; 
+import logo from "../images/WhatsApp Image 2025-08-06 at 00.46.09_0466def9.png"; 
+import style from "../style/Navbar.module.css";
+import { FaBars, FaTimes } from "react-icons/fa";
 
 const Navbar = () => {
-  return (
-    <>
-      <header className={style.header}>
-        <ul>
-          <li>
-            <Link to="/about">About</Link>
-          </li>
-          <li>
-            <Link to="/team">Our Team</Link>
-          </li>
-          <li>
-            <Link to="/villa">Villas</Link>
-          </li>
-          <li>
-            <Link to="/home">
-              <p className={style.logo}>Aqar</p>
-            </Link>
-          </li>
+  const [menuOpen, setMenuOpen] = useState(false);
 
+  const handleNavClick = () => {
+    setMenuOpen(false);
+  };
+
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
+  };
+
+  return (
+    <header className={style.header}>
+      <div className={style.navbarTop}>
+       
+        <button
+          className={style.menuIcon}
+          onClick={toggleMenu}
+          aria-label={menuOpen ? "Close menu" : "Open menu"}
+        >
+          {menuOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
+        </button>
+      </div>
+      <nav className={`${style.navContainer} ${menuOpen ? style.open : ""}`}>
+        <ul className={style.navLinks}>
           <li>
-            <Link to="/department">Appartments</Link>
+            <Link to="/about" onClick={handleNavClick}>About</Link>
           </li>
           <li>
-            <Link to="/contact">Contact</Link>
+            <Link to="/team" onClick={handleNavClick}>Our Team</Link>
           </li>
           <li>
-            <Link to="/login">login</Link>
+            <Link to="/villa" onClick={handleNavClick}>Villas</Link>
+          </li>
+          <li>
+             <Link to="/home" onClick={handleNavClick}>
+          <img src={logo} alt="Logo" className={style.logo} />
+        </Link>
+          </li>
+          <li>
+            <Link to="/department" onClick={handleNavClick}>Apartments</Link>
+          </li>
+          <li>
+            <Link to="/contact" onClick={handleNavClick}>Contact</Link>
+          </li>
+          <li>
+            <Link to="/login" onClick={handleNavClick}>Login</Link>
           </li>
         </ul>
-      </header>
-    </>
+      </nav>
+    </header>
   );
 };
 

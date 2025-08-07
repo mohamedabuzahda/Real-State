@@ -14,6 +14,7 @@ const App = () => {
     location.pathname === '/products/:id';
   return (
     <div>
+     
       {!hideNavbar && <Navbar />}
       <Routes>
         {appRoutes}
