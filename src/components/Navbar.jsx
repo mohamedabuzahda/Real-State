@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import logo from "../images/WhatsApp Image 2025-08-06 at 00.46.09_0466def9.png"; 
+import logo from "../images/WhatsApp Image 2025-08-07 at 19.38.18_6aa2da4a.png"; 
 import style from "../style/Navbar.module.css";
 import { FaBars, FaTimes } from "react-icons/fa";
 
@@ -37,7 +37,7 @@ const Navbar = () => {
             <Link to="/about" onClick={handleNavClick}>About</Link>
           </li>
           <li>
-            <Link to="/team" onClick={handleNavClick}>Our Team</Link>
+            <Link to="/team" onClick={handleNavClick}>Team</Link>
           </li>
           <li>
             <Link to="/villa" onClick={handleNavClick}>Villas</Link>
