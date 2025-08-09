@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import { FaFacebook } from "react-icons/fa6";
 import { FcGoogle } from "react-icons/fc";
@@ -94,3 +95,17 @@ const Register = () => {
 };
 
 export default Register;
+=======
+import React from 'react'
+
+const Register = () => {
+  return (
+    <div>
+      <h1>Register</h1>
+      <p>Create an account to start using our services.</p>
+    </div>
+  )
+}
+
+export default Register
+>>>>>>> a6c2a35c224a0b515445a8c1acea1b16485acd8e

@@ -14,7 +14,10 @@ const App = () => {
     location.pathname === '/products/:id';
   return (
     <div>
+<<<<<<< HEAD
      
+=======
+>>>>>>> a6c2a35c224a0b515445a8c1acea1b16485acd8e
       {!hideNavbar && <Navbar />}
       <Routes>
         {appRoutes}

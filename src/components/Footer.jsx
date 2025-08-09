@@ -1,7 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
+<<<<<<< HEAD
 
 import { FaCartShopping } from "react-icons/fa6";
+=======
+>>>>>>> a6c2a35c224a0b515445a8c1acea1b16485acd8e
 import style from "../style/Footer.module.css"; // Assuming you have a CSS module for styling
 const Footer = () => {
   return (
@@ -21,9 +24,12 @@ const Footer = () => {
           <li>
             <Link to="/privacy">Privacy Policy</Link>
           </li>
+<<<<<<< HEAD
           <li>
             <Link to="/cart"><FaCartShopping /></Link>
           </li>
+=======
+>>>>>>> a6c2a35c224a0b515445a8c1acea1b16485acd8e
         </ul>
         <p className={style.copyright}>
           &copy; 2025 <span className={style.logo}>Aqar</span> Real Estate App.

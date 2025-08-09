@@ -18,7 +18,10 @@
     color: var(--c-2);
     position: relative;
     z-index: 1;
+<<<<<<< HEAD
     
+=======
+>>>>>>> a6c2a35c224a0b515445a8c1acea1b16485acd8e
     h1 {
       font-size: 45px;
       margin-bottom: 40px;
@@ -26,11 +29,14 @@
       max-width: 100%;
       font-size: 45px;
     }
+<<<<<<< HEAD
       .btn-17:hover{
         color: var(--c-1) !important;
                 background-color: var(--c-2) !important;
                 
             }
+=======
+>>>>>>> a6c2a35c224a0b515445a8c1acea1b16485acd8e
   }
   .landing::before {
     content: "";
@@ -82,9 +88,12 @@
     justify-content: center;
     align-items: center;
     width: 100%;
+<<<<<<< HEAD
     img{
       margin: 0;
     }
+=======
+>>>>>>> a6c2a35c224a0b515445a8c1acea1b16485acd8e
     .project {
       width: 50%;
       padding: 20px;
@@ -254,13 +263,19 @@
         .btn-17:after,
         .btn-17:before {
             background-color: var(--c-1);
+<<<<<<< HEAD
             
+=======
+>>>>>>> a6c2a35c224a0b515445a8c1acea1b16485acd8e
         }
         &:hover {
             .btn-17{
                 color: var(--c-2);
                 background-color: var(--c-1);
+<<<<<<< HEAD
                 
+=======
+>>>>>>> a6c2a35c224a0b515445a8c1acea1b16485acd8e
             }
       h1 .letter {
         opacity: 0;
@@ -320,6 +335,7 @@
     opacity: 1;
   }
 }
+<<<<<<< HEAD
 
 /* From Uiverse.io by doniaskima */ 
 .btn-17,
@@ -427,3 +443,5 @@ border: 3px solid #eee !important;
 .btn-17:hover:after {
   --progress: -102%;
 }
+=======
+>>>>>>> a6c2a35c224a0b515445a8c1acea1b16485acd8e

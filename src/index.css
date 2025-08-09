@@ -9,7 +9,10 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> a6c2a35c224a0b515445a8c1acea1b16485acd8e
 a {
   text-decoration: none;
 }
@@ -102,7 +105,11 @@ h6 {
 }
 
 .btn-17,
+<<<<<<< HEAD
 .btn-17 .textContainer {
+=======
+.btn-17 .text-container {
+>>>>>>> a6c2a35c224a0b515445a8c1acea1b16485acd8e
   overflow: hidden;
   position: relative;
 }

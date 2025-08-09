@@ -3,6 +3,7 @@
   padding: 20px;
   background-color: #000;
   width: 100%;
+<<<<<<< HEAD
   height: 80px;
   position: fixed;
   top: 0;
@@ -20,12 +21,23 @@ img {
   width: 80px;
   height: 80px;
   margin-top: -20px;
+=======
+}
+
+.header .logo {
+  color: #fff;
+  transition: 0.3s;
+  font-size: 30px;
+  letter-spacing: 5px;
+  margin-bottom: 10px;
+>>>>>>> a6c2a35c224a0b515445a8c1acea1b16485acd8e
 }
 
 .header .logo:hover {
   color: #afafaf;
 }
 
+<<<<<<< HEAD
 .navbarTop {
   display: flex;
   /* justify-content: space-between; */
@@ -56,17 +68,35 @@ img {
 }
 
 .navLinks li a {
+=======
+.header ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  list-style: none;
+}
+
+.header a {
+>>>>>>> a6c2a35c224a0b515445a8c1acea1b16485acd8e
   color: #fff;
   text-decoration: none;
   position: relative;
   transition: 0.3s;
 }
 
+<<<<<<< HEAD
 .navLinks li a:hover {
   color: #afafaf;
 }
 
 .navLinks li a::after {
+=======
+.header a:hover {
+  color: #afafaf;
+}
+
+.header a::after{
+>>>>>>> a6c2a35c224a0b515445a8c1acea1b16485acd8e
   content: "";
   display: block;
   position: absolute;
@@ -78,6 +108,7 @@ img {
   transition: width 0.3s;
 }
 
+<<<<<<< HEAD
 .navLinks li a:hover::after {
   width: 20px;
 }
@@ -122,4 +153,8 @@ img {
     gap: 30px;
     padding: 20px;
   }
+=======
+.header a:hover::after {
+  width: 20px;
+>>>>>>> a6c2a35c224a0b515445a8c1acea1b16485acd8e
 }

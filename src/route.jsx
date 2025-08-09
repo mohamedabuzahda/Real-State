@@ -2,27 +2,38 @@ import React from 'react';
 import {  Route } from 'react-router-dom';
 import Home from './pages/Home';
 import About from './pages/About';
+<<<<<<< HEAD
 import Team from './pages/Team';
 import Contact from './pages/Contact';
 import Villa from './pages/Villa';
 import Detailsvilla from './pages/Detailsvilla';
 import Department from './pages/Department';
 import Detailsdepartment from './pages/Detailsdepartment';
+=======
+import Contact from './pages/Contact';
+import Dashboard from './pages/Dashboard';
+import Products from './pages/Products';
+import SingleProduct from './pages/SingleProduct';
+>>>>>>> a6c2a35c224a0b515445a8c1acea1b16485acd8e
 import Cart from './pages/Cart';
 import NotFound from './pages/NotFound';
 import Order from './pages/Order';
 import Login from './auth/Login';
 import Register from './auth/Register';
+<<<<<<< HEAD
 import Dashboard from './pages/Dashboard/Dashboard';
 import Users from './pages/Dashboard/Users/Users';
 import AddUser from './pages/Dashboard/Users/AddUser';
 import DashboardProducts from './pages/Dashboard/Products/Products';
 import AddProducts from './pages/Dashboard/Products/AddProduct';
 import Orders from './pages/Dashboard/Orders/Orders';
+=======
+>>>>>>> a6c2a35c224a0b515445a8c1acea1b16485acd8e
 
 
 const appRoutes = (
   <>
+<<<<<<< HEAD
     <Route path="/" element={<Home />} />,
     <Route path="/home" element={<Home />} />,
     <Route path="/about" element={<About />} />,
@@ -45,6 +56,20 @@ const appRoutes = (
     <Route path="/login" element={<Login />} />,
     <Route path="/register" element={<Register />} />,
     <Route path="*" element={<NotFound />} />,
+=======
+    <Route  path="/" element={<Home />} />,
+    <Route  path="/home" element={<Home />} />,
+  <Route  path="/about" element={<About />} />,
+  <Route  path="/contact" element={<Contact />} />,
+  <Route  path="/dashboard" element={<Dashboard />} />,
+  <Route  path="/products" element={<Products />} />,
+  <Route  path="/products/:id" element={<SingleProduct />} />,
+  <Route  path="/cart" element={<Cart />} />,
+  <Route  path="/order" element={<Order />} />,
+  <Route  path="/login" element={<Login />} />,
+  <Route  path="/register" element={<Register />} />,
+  <Route  path="*" element={<NotFound />} />,
+>>>>>>> a6c2a35c224a0b515445a8c1acea1b16485acd8e
   </>
 );
 

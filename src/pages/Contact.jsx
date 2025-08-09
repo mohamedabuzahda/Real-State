@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from "react";
 import "../style/Contact.css";
 
@@ -122,3 +123,17 @@ const Contact = () => {
 };
 
 export default Contact;
+=======
+import React from 'react'
+
+const Contact = () => {
+  return (
+    <div>
+      <h1>Contact Us</h1>
+      <p>If you have any questions, feel free to reach out!</p>
+    </div>
+  )
+}
+
+export default Contact
+>>>>>>> a6c2a35c224a0b515445a8c1acea1b16485acd8e
