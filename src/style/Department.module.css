@@ -183,16 +183,6 @@
     color: var(--c-2);
   }
 
-  .clear-filters {
-    border: 2px solid var(--c-2) !important;
-    color: var(--c-2);
-  }
-
-  .clear-filters:hover {
-    background-color: var(--c-2) !important;
-    color: var(--c-1) !important;
-  }
-
   /* Properties Grid */
   .properties-grid {
     display: grid;
@@ -580,6 +570,10 @@
   --progress: -102%;
 }
 
+.clear-filters:hover {
+  animation: move-up-alternate 0.3s forwards;
+}
+
 /* Animations */
 @keyframes appear {
   0% {
@@ -597,6 +591,14 @@
   }
 
   50% {
-    transform: translateY(-300%);
+    transform: translateY(80%);
+  }
+
+  51% {
+    transform: translateY(-80%);
+  }
+
+  to {
+    transform: translateY(0);
   }
 }

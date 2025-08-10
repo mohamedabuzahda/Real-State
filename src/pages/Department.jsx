@@ -142,7 +142,9 @@ const Department = () => {
 
       {/* Summary Section */}
       <div className={styles.summary}>
-        <h1 className={styles["section-title"]}>Premium Properties Collection</h1>
+        <h1 className={styles["section-title"]}>
+          Premium Properties Collection
+        </h1>
         <p>
           We offer an exclusive selection of the finest properties in prime
           locations. Each property is carefully selected to meet the highest
@@ -159,7 +161,7 @@ const Department = () => {
             <select
               value={priceRange}
               onChange={(e) => setPriceRange(e.target.value)}
-              className={styles["filter-select"]} 
+              className={styles["filter-select"]}
             >
               <option value="all">All Prices</option>
               <option value="low">Under $300K</option>
@@ -173,7 +175,7 @@ const Department = () => {
             <select
               value={bedrooms}
               onChange={(e) => setBedrooms(e.target.value)}
-              className={styles["filter-select"]} 
+              className={styles["filter-select"]}
             >
               <option value="all">Any</option>
               <option value="1">1 Bedroom</option>
@@ -183,10 +185,11 @@ const Department = () => {
             </select>
           </div>
 
-          <button className={styles["btn-17 clear-filters"]}>
-
+          <button className={styles["btn-17"]}>
             <span className={styles["text-container"]}>
-              <span className={styles["text"]}>Clear Filters</span>
+              <span className={styles["clear-filters"]}>
+                <div className={styles.text}>Clear Filters</div>
+              </span>
             </span>
           </button>
         </div>
@@ -198,7 +201,6 @@ const Department = () => {
           <div
             key={property.id}
             className={styles["property-card"]}
-
             onClick={() => navigate(`/department/${property.id}`)}
           >
             <div className={styles["property-image-container"]}>
@@ -230,7 +232,7 @@ const Department = () => {
                   <FaBath />
                   <span>{property.bathrooms} Baths</span>
                 </div>
-                <div className={styles["detail-item"]}> 
+                <div className={styles["detail-item"]}>
                   <FaRulerCombined />
                   <span>{property.area} sq ft</span>
                 </div>

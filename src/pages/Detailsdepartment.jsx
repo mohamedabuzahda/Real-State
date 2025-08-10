@@ -121,9 +121,9 @@ const Detailsdepartment = () => {
           onClick={() => navigate("/department")}
         >
           <span className={styles["text-container"]}>
-            <span className={styles["text"]}>
-              <FaArrowLeft /> Back to Properties
-            </span>
+            <div className={styles.text}>
+              <FaArrowLeft /> Back to Apartments
+            </div>
           </span>
         </button>
         <div className={styles["header-actions"]}>
@@ -355,7 +355,7 @@ const Detailsdepartment = () => {
               <div className={styles["form-group"]}>
                 <textarea placeholder="Additional Message" rows="4"></textarea>
               </div>
-              <button type="submit" className={styles["btn-17"]}>
+              <button className={styles["btn-17"]} type="submit">
                 <span className={styles["text-container"]}>
                   <span className={styles["text"]}>Schedule Visit</span>
                 </span>
@@ -365,14 +365,26 @@ const Detailsdepartment = () => {
 
           {/* Quick Actions */}
           <div className={styles["quick-actions"]}>
-            <button className={styles["btn-17"]} action-button primary>
-              <FaShoppingCart /> Add to Cart
+            <button className={styles["btn-17"]} type="submit">
+              <span className={styles["text-container"]}>
+                <div className={styles.text}>
+                  <FaShoppingCart /> Add to Cart
+                </div>
+              </span>
             </button>
-            <button className={styles["btn-17"]} action-button secondary>
-              <FaPhone /> Call Agent
+            <button className={styles["btn-17"]} type="submit">
+              <span className={styles["text-container"]}>
+                <div className={styles.text}>
+                  <FaPhone /> Call Agent
+                </div>
+              </span>
             </button>
-            <button className={styles["btn-17"]} action-button secondary>
-              <FaEnvelope /> Send Message
+            <button className={styles["btn-17"]} type="submit">
+              <span className={styles["text-container"]}>
+                <div className={styles.text}>
+                  <FaEnvelope /> Send Message
+                </div>
+              </span>
             </button>
           </div>
         </div>

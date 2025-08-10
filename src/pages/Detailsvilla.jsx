@@ -125,13 +125,13 @@ const Detailsvilla = () => {
       {/* Header */}
       <div className={styles["details-header"]}>
         <button
-          className={styles["btn-17 back-btn"]}
-          onClick={() => navigate("/villa")}
+          className={styles["btn-17"]}
+          onClick={() => navigate("/department")}
         >
           <span className={styles["text-container"]}>
-            <span className={styles.text}>
+            <div className={styles.text}>
               <FaArrowLeft /> Back to Villas
-            </span>
+            </div>
           </span>
         </button>
         <div className={styles["header-actions"]}>
@@ -367,14 +367,26 @@ const Detailsvilla = () => {
 
           {/* Quick Actions */}
           <div className={styles["quick-actions"]}>
-            <button className={styles["btn-17 action-button primary"]}>
-              <FaShoppingCart /> Add to Cart
+            <button className={styles["btn-17"]} type="submit">
+              <span className={styles["text-container"]}>
+                <div className={styles.text}>
+                  <FaShoppingCart /> Add to Cart
+                </div>
+              </span>
             </button>
-            <button className={styles["btn-17 action-button secondary"]}>
-              <FaPhone /> Call Agent
+            <button className={styles["btn-17"]} type="submit">
+              <span className={styles["text-container"]}>
+                <div className={styles.text}>
+                  <FaPhone /> Call Agent
+                </div>
+              </span>
             </button>
-            <button className={styles["btn-17 action-button secondary"]}>
-              <FaEnvelope /> Send Message
+            <button className={styles["btn-17"]} type="submit">
+              <span className={styles["text-container"]}>
+                <div className={styles.text}>
+                  <FaEnvelope /> Send Message
+                </div>
+              </span>
             </button>
           </div>
         </div>

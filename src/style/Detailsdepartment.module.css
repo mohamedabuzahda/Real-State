@@ -746,7 +746,7 @@
 
 .btn-17 svg {
     display: block;
-    vertical-align: middle;
+    /* vertical-align: middle; */
 }
 
 .btn-17 [hidden] {
@@ -756,12 +756,12 @@
 .btn-17 {
     border: 3px solid #eee !important;
     border-width: 2px;
-    padding: 0.8rem 3rem;
+    padding: 0.8rem;
     z-index: 0;
 }
 
 .btn-17,
-.btn-17 .textContainer {
+.btn-17 .text-container {
     overflow: hidden;
     position: relative;
 }
@@ -777,8 +777,44 @@
 }
 
 .btn-17:hover .text {
-    -webkit-animation: move-up-alternate 0.3s forwards alternate;
-    animation: move-up-alternate 0.3s forwards alternate;
+    -webkit-animation: move-up-alternate 0.3s forwards;
+    animation: move-up-alternate 0.3s forwards;
+}
+
+@-webkit-keyframes move-up-alternate {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(80%);
+    }
+
+    51% {
+        transform: translateY(-80%);
+    }
+
+    to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes move-up-alternate {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(80%);
+    }
+
+    51% {
+        transform: translateY(-80%);
+    }
+
+    to {
+        transform: translateY(0);
+    }
 }
 
 .btn-17:after,
@@ -812,15 +848,24 @@
     --progress: -102%;
 }
 
-/* Animations */
-@keyframes appear {
-    0% {
-        opacity: 0;
-    }
+.quick-actions span,
+.details-header span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
-    100% {
-        opacity: 1;
-    }
+.quick-actions span .text,
+.details-header span .text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.quick-actions span .text:hover,
+.details-header span .text:hover {
+    animation: move-up-alternate 0.3s forwards;
 }
 
 @keyframes move-up-alternate {
@@ -828,7 +873,15 @@
         transform: translateY(0);
     }
 
-    100% {
-        transform: translateY(-300%);
+    50% {
+        transform: translateY(80%);
+    }
+
+    51% {
+        transform: translateY(-80%);
+    }
+
+    to {
+        transform: translateY(0);
     }
 }
