@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import { FaFacebook } from "react-icons/fa6";
 import { FcGoogle } from "react-icons/fc";
@@ -41,7 +40,7 @@ const Register = () => {
       <div className="register-card">
         <div className="register-card-body">
           <h2 className="register-title">Create your AQAR account</h2>
-          <p className="register-subtitle">Sign up to continue your experience.</p>
+          <p  className="register-subtitle">Sign up to continue your experience.</p>
           <form id="signupForm" onSubmit={handleSubmit}>
             <div className="register-input-group">
               <input
@@ -95,17 +94,3 @@ const Register = () => {
 };
 
 export default Register;
-=======
-import React from 'react'
-
-const Register = () => {
-  return (
-    <div>
-      <h1>Register</h1>
-      <p>Create an account to start using our services.</p>
-    </div>
-  )
-}
-
-export default Register
->>>>>>> a6c2a35c224a0b515445a8c1acea1b16485acd8e

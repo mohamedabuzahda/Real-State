@@ -367,7 +367,13 @@ const Detailsvilla = () => {
 
           {/* Quick Actions */}
           <div className={styles["quick-actions"]}>
-            <button className={styles["btn-17 action-button primary"]}>
+            <button
+              className={styles["btn-17 action-button primary"]}
+              onClick={() => {
+                localStorage.setItem("cartItem", JSON.stringify(villa));
+                navigate("/cart");
+              }}
+            >
               <FaShoppingCart /> Add to Cart
             </button>
             <button className={styles["btn-17 action-button secondary"]}>

@@ -3,6 +3,8 @@ import appRoutes from './route';
 import './App.css';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 
 const App = () => {
@@ -14,10 +16,6 @@ const App = () => {
     location.pathname === '/products/:id';
   return (
     <div>
-<<<<<<< HEAD
-     
-=======
->>>>>>> a6c2a35c224a0b515445a8c1acea1b16485acd8e
       {!hideNavbar && <Navbar />}
       <Routes>
         {appRoutes}

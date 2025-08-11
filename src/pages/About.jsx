@@ -1,18 +1,13 @@
-<<<<<<< HEAD
 import React from 'react';
 import Img1 from "../images/britney-gill-photography_SP_DAY2_63-Copy1-cropped.jpg";
 import Img2 from "../images/britney-gill-photography_SP_DAY3_147-cropped.jpg";
 import Img3 from "../images/britney-gill-photography_SP_DAY3_155-cropped2.jpg";
 import Img4 from "../images/FirstLight-Seattle-image-29_BW-cropped.jpg";
 import '../style/About.css'; // Assuming you have a CSS file for styling
-=======
-import React from 'react'
->>>>>>> a6c2a35c224a0b515445a8c1acea1b16485acd8e
 
 const About = () => {
   return (
     <div>
-<<<<<<< HEAD
       <section className="hero">
         <div className="hero-content">
           A LEADER IN THE WORLD<br />OF LUXURY LIVING
@@ -60,12 +55,3 @@ const About = () => {
 };
 
 export default About;
-=======
-      <h1>About Us</h1>
-      <p>Learn more about our company and values.</p>
-    </div>
-  )
-}
-
-export default About
->>>>>>> a6c2a35c224a0b515445a8c1acea1b16485acd8e

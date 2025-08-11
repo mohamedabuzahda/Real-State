@@ -18,10 +18,6 @@
     color: var(--c-2);
     position: relative;
     z-index: 1;
-<<<<<<< HEAD
-    
-=======
->>>>>>> a6c2a35c224a0b515445a8c1acea1b16485acd8e
     h1 {
       font-size: 45px;
       margin-bottom: 40px;
@@ -29,14 +25,6 @@
       max-width: 100%;
       font-size: 45px;
     }
-<<<<<<< HEAD
-      .btn-17:hover{
-        color: var(--c-1) !important;
-                background-color: var(--c-2) !important;
-                
-            }
-=======
->>>>>>> a6c2a35c224a0b515445a8c1acea1b16485acd8e
   }
   .landing::before {
     content: "";
@@ -88,12 +76,6 @@
     justify-content: center;
     align-items: center;
     width: 100%;
-<<<<<<< HEAD
-    img{
-      margin: 0;
-    }
-=======
->>>>>>> a6c2a35c224a0b515445a8c1acea1b16485acd8e
     .project {
       width: 50%;
       padding: 20px;
@@ -263,19 +245,11 @@
         .btn-17:after,
         .btn-17:before {
             background-color: var(--c-1);
-<<<<<<< HEAD
-            
-=======
->>>>>>> a6c2a35c224a0b515445a8c1acea1b16485acd8e
         }
         &:hover {
             .btn-17{
                 color: var(--c-2);
                 background-color: var(--c-1);
-<<<<<<< HEAD
-                
-=======
->>>>>>> a6c2a35c224a0b515445a8c1acea1b16485acd8e
             }
       h1 .letter {
         opacity: 0;
@@ -335,113 +309,3 @@
     opacity: 1;
   }
 }
-<<<<<<< HEAD
-
-/* From Uiverse.io by doniaskima */ 
-.btn-17,
-.btn-17 *,
-.btn-17 :after,
-.btn-17 :before,
-.btn-17:after,
-.btn-17:before {
-  border: 0 solid;
-  box-sizing: border-box;
-}
-
-.btn-17 {
-  -webkit-tap-highlight-color: transparent;
-  -webkit-appearance: button;
-  background-color: transparent;
-  background-image: none;
-  color: #fff;
-  cursor: pointer;
-  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
-    Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif,
-    Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
-  font-size: 100%;
-  font-weight: 600;
-  line-height: 1.5;
-  margin: 0;
-  -webkit-mask-image: -webkit-radial-gradient(#000, #fff);
-  
-  padding: 0;
-  text-transform: uppercase;
-}
-
-.btn-17:disabled {
-  cursor: default;
-}
-
-.btn-17:-moz-focusring {
-  outline: auto;
-}
-
-.btn-17 svg {
-  display: block;
-  vertical-align: middle;
-}
-
-.btn-17 [hidden] {
-  display: none;
-}
-
-.btn-17 {
-border: 3px solid #eee !important;
-  border-width: 2px;
-  padding: 0.8rem 3rem;
-  z-index: 0;
-}
-
-.btn-17,
-.btn-17 .textContainer {
-  overflow: hidden;
-  position: relative;
-}
-
-.btn-17 .text-container {
-  display: block;
-  mix-blend-mode: difference;
-}
-
-.btn-17 .text {
-  display: block;
-  position: relative;
-}
-
-.btn-17:hover .text {
-  -webkit-animation: move-up-alternate 0.3s forwards;
-  animation: move-up-alternate 0.3s forwards;
-}
-
-.btn-17:after,
-.btn-17:before {
-  --skew: 0.2;
-  background: #fff;
-  content: "";
-  display: block;
-  height: 102%;
-  left: calc(-50% - 50% * var(--skew));
-  pointer-events: none;
-  position: absolute;
-  top: -104%;
-  transform: skew(calc(150deg * var(--skew))) translateY(var(--progress, 0));
-  transition: transform 0.2s ease;
-  width: 100%;
-}
-
-.btn-17:after {
-  --progress: 0%;
-  left: calc(50% + 50% * var(--skew));
-  top: 102%;
-  z-index: -1;
-}
-
-.btn-17:hover:before {
-  --progress: 100%;
-}
-
-.btn-17:hover:after {
-  --progress: -102%;
-}
-=======
->>>>>>> a6c2a35c224a0b515445a8c1acea1b16485acd8e
