@@ -28,7 +28,6 @@ const Detailsdepartment = () => {
   const { id } = useParams();
   const navigate = useNavigate();
   const [activeImage, setActiveImage] = useState(0);
-  const [isFavorite, setIsFavorite] = useState(false);
 
   // Mock data for the specific property
   const property = {
@@ -108,10 +107,6 @@ const Detailsdepartment = () => {
     setActiveImage(index);
   };
 
-  const toggleFavorite = () => {
-    setIsFavorite(!isFavorite);
-  };
-
   return (
     <div className={styles["details"]}>
       {/* Header */}
@@ -121,19 +116,11 @@ const Detailsdepartment = () => {
           onClick={() => navigate("/department")}
         >
           <span className={styles["text-container"]}>
-            <div className={styles.text}>
-              <FaArrowLeft /> Back to Apartments
-            </div>
+            <span className={styles.text}>
+              <FaArrowLeft /> Back to Aepartments
+            </span>
           </span>
         </button>
-        <div className={styles["header-actions"]}>
-          <button className={styles["action-btn"]} onClick={toggleFavorite}>
-            <FaHeart className={isFavorite ? styles.favorite : ""} />
-          </button>
-          <button className={styles["action-btn"]}>
-            <FaShare />
-          </button>
-        </div>
       </div>
 
       {/* Hero Section */}
@@ -355,7 +342,7 @@ const Detailsdepartment = () => {
               <div className={styles["form-group"]}>
                 <textarea placeholder="Additional Message" rows="4"></textarea>
               </div>
-              <button className={styles["btn-17"]} type="submit">
+              <button type="submit" className={styles["btn-17"]}>
                 <span className={styles["text-container"]}>
                   <span className={styles["text"]}>Schedule Visit</span>
                 </span>
@@ -365,7 +352,14 @@ const Detailsdepartment = () => {
 
           {/* Quick Actions */}
           <div className={styles["quick-actions"]}>
-            <button className={styles["btn-17"]} type="submit">
+            <button
+              className={styles["btn-17"]}
+              type="submit"
+              onClick={() => {
+                localStorage.setItem("cartItem", JSON.stringify(property));
+                navigate("/cart");
+              }}
+            >
               <span className={styles["text-container"]}>
                 <div className={styles.text}>
                   <FaShoppingCart /> Add to Cart

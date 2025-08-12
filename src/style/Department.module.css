@@ -183,6 +183,41 @@
     color: var(--c-2);
   }
 
+  .clear-filters:hover {
+    animation: move-up-alternate 0.3s forwards;
+  }
+
+
+  /* Animations */
+  @keyframes appear {
+    0% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @keyframes move-up-alternate {
+    0% {
+      transform: translateY(0);
+    }
+
+    50% {
+      transform: translateY(80%);
+    }
+
+    51% {
+      transform: translateY(-80%);
+    }
+
+    to {
+      transform: translateY(0);
+
+    }
+  }
+
   /* Properties Grid */
   .properties-grid {
     display: grid;
@@ -570,10 +605,6 @@
   --progress: -102%;
 }
 
-.clear-filters:hover {
-  animation: move-up-alternate 0.3s forwards;
-}
-
 /* Animations */
 @keyframes appear {
   0% {
@@ -591,14 +622,6 @@
   }
 
   50% {
-    transform: translateY(80%);
-  }
-
-  51% {
-    transform: translateY(-80%);
-  }
-
-  to {
-    transform: translateY(0);
+    transform: translateY(-300%);
   }
 }

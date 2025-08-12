@@ -1,3 +1,5 @@
+
+
 import React, { useState } from "react";
 import { useParams, useNavigate, Link } from "react-router-dom";
 import styles from "../style/Detailsvilla.module.css";
@@ -27,7 +29,6 @@ const Detailsvilla = () => {
   const { id } = useParams();
   const navigate = useNavigate();
   const [activeImage, setActiveImage] = useState(0);
-  const [isFavorite, setIsFavorite] = useState(false);
 
   // Mock data for the specific villa
   const villa = {
@@ -116,32 +117,20 @@ const Detailsvilla = () => {
     setActiveImage(index);
   };
 
-  const toggleFavorite = () => {
-    setIsFavorite(!isFavorite);
-  };
-
   return (
     <div className={styles.details}>
       {/* Header */}
       <div className={styles["details-header"]}>
         <button
           className={styles["btn-17"]}
-          onClick={() => navigate("/department")}
+          onClick={() => navigate("/villa")}
         >
           <span className={styles["text-container"]}>
-            <div className={styles.text}>
+            <span className={styles.text}>
               <FaArrowLeft /> Back to Villas
-            </div>
+            </span>
           </span>
         </button>
-        <div className={styles["header-actions"]}>
-          <button className={styles["action-btn"]} onClick={toggleFavorite}>
-            <FaHeart className={isFavorite ? styles.favorite : ""} />
-          </button>
-          <button className={styles["action-btn"]}>
-            <FaShare />
-          </button>
-        </div>
       </div>
 
       {/* Hero Section */}
@@ -367,7 +356,14 @@ const Detailsvilla = () => {
 
           {/* Quick Actions */}
           <div className={styles["quick-actions"]}>
-            <button className={styles["btn-17"]} type="submit">
+            <button
+              className={styles["btn-17"]}
+              type="submit"
+              onClick={() => {
+                localStorage.setItem("cartItem", JSON.stringify(villa));
+                navigate("/cart");
+              }}
+            >
               <span className={styles["text-container"]}>
                 <div className={styles.text}>
                   <FaShoppingCart /> Add to Cart

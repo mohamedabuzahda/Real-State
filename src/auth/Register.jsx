@@ -23,16 +23,31 @@ const Register = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    if (!formData.email || !formData.password || !formData.name) {
-      alert('All fields are required!');
+    // Regex patterns
+    const nameRegex = /^[\u0600-\u06FFa-zA-Z ]{3,}$/; // اسم عربي أو إنجليزي 3 أحرف فأكثر
+    const emailRegex = /^[\w-.]+@([\w-]+\.)+[\w-]{2,4}$/;
+    const passwordRegex = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d!@#$%^&*]{6,}$/; // 6 أحرف على الأقل وحرف ورقم
+
+    if (!formData.name || !formData.email || !formData.password) {
+      alert('جميع الحقول مطلوبة');
       return;
-    } else if (!formData.email.includes('@')) {
-      alert('Please enter a valid email address.');
+    }
+    if (!nameRegex.test(formData.name)) {
+      alert('يرجى إدخال اسم صحيح (3 أحرف فأكثر)');
+      return;
+    }
+    if (!emailRegex.test(formData.email)) {
+      alert('يرجى إدخال بريد إلكتروني صحيح');
+      return;
+    }
+    if (!passwordRegex.test(formData.password)) {
+      alert('كلمة المرور يجب أن تحتوي على 6 أحرف على الأقل وحرف ورقم');
       return;
     }
 
-    // Handle successful signup here
-    console.log('Signup submitted:', formData);
+  // حفظ بيانات المستخدم في localStorage
+  localStorage.setItem('user', JSON.stringify({ email: formData.email, password: formData.password }));
+  window.location.href = '/login';
   };
 
   return (
@@ -40,7 +55,7 @@ const Register = () => {
       <div className="register-card">
         <div className="register-card-body">
           <h2 className="register-title">Create your AQAR account</h2>
-          <p className="register-subtitle">Sign up to continue your experience.</p>
+          <p  className="register-subtitle">Sign up to continue your experience.</p>
           <form id="signupForm" onSubmit={handleSubmit}>
             <div className="register-input-group">
               <input
