@@ -8,20 +8,39 @@ import "../style/Login.css";
 const Login = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [errorMsg, setErrorMsg] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
+    // Regex patterns
+    const emailRegex = /^[\w-.]+@([\w-]+\.)+[\w-]{2,4}$/;
+    const passwordRegex = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d!@#$%^&*]{6,}$/; // 6 أحرف على الأقل وحرف ورقم
+
     if (!email || !password) {
-      alert('Email and Password are required!');
+      setErrorMsg('جميع الحقول مطلوبة');
       return;
-    } else if (!email.includes('@')) {
-      alert('Please enter a valid email address.');
+    }
+    if (!emailRegex.test(email)) {
+      setErrorMsg('يرجى إدخال بريد إلكتروني صحيح');
+      return;
+    }
+    if (!passwordRegex.test(password)) {
+      setErrorMsg('كلمة المرور يجب أن تحتوي على 6 أحرف على الأقل وحرف ورقم');
       return;
     }
 
-    // Handle successful login here
-    console.log('Login submitted:', { email, password });
+    setErrorMsg("");
+    // تحقق من بيانات المستخدم
+    const user = JSON.parse(localStorage.getItem('user'));
+    if (!user || user.email !== email || user.password !== password) {
+      setErrorMsg('بيانات الدخول غير صحيحة أو لا يوجد حساب مسجل');
+      return;
+    }
+    // تفعيل الدخول
+    localStorage.setItem('isAuth', 'true');
+    const prevPage = localStorage.getItem('prevPage') || '/';
+    window.location.href = prevPage;
   };
 
   return (
@@ -30,6 +49,11 @@ const Login = () => {
         <div className="login-card-body">
           <h2 className="login-title">Welcome back to AQAR!</h2>
           <p className="login-subtitle">Sign in to continue your experience.</p>
+          {errorMsg && (
+            <div style={{color: 'red', marginBottom: '12px', fontWeight: 'bold', textAlign: 'center'}}>
+              خطأ فى بياناتك: {errorMsg}
+            </div>
+          )}
           <form id="loginForm" onSubmit={handleSubmit}>
             <div className="login-input-group">
               <input

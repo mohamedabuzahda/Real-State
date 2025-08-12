@@ -11,7 +11,7 @@ const Cart = () => {
   }, []);
 
   if (!cartItem) {
-    return <div>السلة فارغة</div>;
+    return <div>No items found</div>;
   }
 
   return (
@@ -24,13 +24,13 @@ const Cart = () => {
         />
         <h3 style={{ marginBottom: '8px' }}>{cartItem.title || cartItem.name}</h3>
         <p style={{ fontWeight: 'bold', color: '#1976d2', marginBottom: '8px' }}>
-          السعر: {cartItem.price} $
+          Price: {cartItem.price} $
         </p>
         <button
           style={{ marginTop: '18px', padding: '10px 24px', background: '#1976d2', color: '#fff', border: 'none', borderRadius: '6px', cursor: 'pointer', fontSize: '16px' }}
           onClick={() => window.location.href = '/order'}
         >
-          الذهاب إلى الطلب
+          Proceed to Checkout
         </button>
       </div>
     </div>

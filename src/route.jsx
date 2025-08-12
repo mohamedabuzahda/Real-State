@@ -8,12 +8,13 @@ import DetailsVilla from './pages/DetailsVilla';
 import Department from './pages/Department';
 import DetailsDepartment from './pages/DetailsDepartment';
 import Contact from './pages/Contact';
-import Dashboard from './pages/Dashboard';
+import Dashboard from './pages/Dashboard/Dashboard';
 import Products from './pages/Products';
 import SingleProduct from './pages/SingleProduct';
 import Cart from './pages/Cart';
+import Order from './pages/Order';
 import NotFound from './pages/NotFound';
-import Order from './pages/Dashboard/Orders/Orders';
+import Orders from './pages/Dashboard/Orders/Orders';
 import Login from './auth/Login';
 import Register from './auth/Register';
 
@@ -36,6 +37,7 @@ const appRoutes = (
   <Route  path="/products/:id" element={<SingleProduct />} />,
   <Route  path="/cart" element={<Cart />} />,
   <Route  path="/order" element={<Order />} />,
+  <Route  path="/orders" element={<Orders />} />,
   <Route  path="/login" element={<Login />} />,
   <Route  path="/register" element={<Register />} />,
   <Route  path="*" element={<NotFound />} />,

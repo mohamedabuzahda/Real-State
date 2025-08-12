@@ -15,14 +15,19 @@ const Navbar = () => {
     setMenuOpen(!menuOpen);
   };
 
+  const isAuth = localStorage.getItem('isAuth') === 'true';
+
+  const handleLogout = () => {
+    localStorage.removeItem('isAuth');
+    window.location.href = '/login';
+  };
+
   return (
     <header className={style.header}>
       <div className={style.navbarTop}>
-        
-             <Link to="/home" onClick={handleNavClick}>
+        <Link to="/home" onClick={handleNavClick}>
           <img src={logo} alt="Logo" className={style.logos} />
         </Link>
-       
         <button
           className={style.menuIcon}
           onClick={toggleMenu}
@@ -43,9 +48,9 @@ const Navbar = () => {
             <Link to="/villa" onClick={handleNavClick}>Villas</Link>
           </li>
           <li>
-             <Link to="/home" onClick={handleNavClick}>
-          <img src={logo} alt="Logo" className={style.logo} />
-        </Link>
+            <Link to="/home" onClick={handleNavClick}>
+              <img src={logo} alt="Logo" className={style.logo} />
+            </Link>
           </li>
           <li>
             <Link to="/department" onClick={handleNavClick}>Apartments</Link>
@@ -54,7 +59,11 @@ const Navbar = () => {
             <Link to="/contact" onClick={handleNavClick}>Contact</Link>
           </li>
           <li>
-            <Link to="/login" onClick={handleNavClick}>Login</Link>
+            {isAuth ? (
+              <button onClick={handleLogout} style={{ background: 'none', border: 'none', color: '#1976d2', cursor: 'pointer', fontWeight: 'bold' }}>Logout</button>
+            ) : (
+              <Link to="/login" onClick={handleNavClick}>Login</Link>
+            )}
           </li>
         </ul>
       </nav>

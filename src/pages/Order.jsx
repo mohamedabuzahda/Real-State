@@ -8,6 +8,8 @@ const Order = () => {
     return saved ? JSON.parse(saved) : [];
   });
   const [showMsg, setShowMsg] = useState(false);
+    const [name, setName] = useState("");
+    const [phone, setPhone] = useState("");
 
   useEffect(() => {
     const item = localStorage.getItem('cartItem');
@@ -17,12 +19,18 @@ const Order = () => {
   }, []);
 
   if (!cartItem) {
-    return <div>لا يوجد طلبات</div>;
+    return <div>No items found</div>;
   }
 
+
   const handlePay = () => {
-    // إضافة الطلب إلى قائمة الطلبات
-    const newOrders = [...orders, cartItem];
+    if (!name || !phone) {
+      alert("please enter your name and phone number");
+      return;
+    }
+    
+    const orderWithUser = { ...cartItem, name, phone };
+    const newOrders = [...orders, orderWithUser];
     setOrders(newOrders);
     localStorage.setItem('orders', JSON.stringify(newOrders));
     setShowMsg(true);
@@ -38,44 +46,37 @@ const Order = () => {
         />
         <h3 style={{ marginBottom: '8px' }}>{cartItem.title || cartItem.name}</h3>
         <p style={{ fontWeight: 'bold', color: '#1976d2', marginBottom: '8px' }}>
-          السعر: {cartItem.price} $
+          Price: {cartItem.price} $
         </p>
-        <p style={{ color: '#555', marginBottom: '8px' }}>العنوان: {cartItem.address}</p>
-        <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '8px', fontSize: '15px', color: '#444' }}>
-          <span>الغرف: {cartItem.bedrooms}</span>
-          <span>الحمامات: {cartItem.bathrooms}</span>
-          <span>المساحة: {cartItem.area} قدم</span>
-        </div>
-        <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '8px', fontSize: '15px', color: '#444' }}>
-          <span>السنة: {cartItem.yearBuilt}</span>
-          <span>الطابق: {cartItem.floor}</span>
-          <span>موقف: {cartItem.parking}</span>
-        </div>
-        <p style={{ color: '#888', fontSize: '14px', marginBottom: '12px' }}>{cartItem.description}</p>
+        <p style={{ color: '#555', marginBottom: '8px' }}>Address: {cartItem.address}</p>
+        
+        <input
+          type="text"
+          placeholder="name"
+          value={name}
+          onChange={e => setName(e.target.value)}
+          style={{ width: '100%', padding: '10px', marginBottom: '10px', borderRadius: '6px', border: '1px solid #ccc', fontSize: '15px' }}
+        />
+        <input
+          type="tel"
+          placeholder="phone number"
+          value={phone}
+          onChange={e => setPhone(e.target.value)}
+          style={{ width: '100%', padding: '10px', marginBottom: '10px', borderRadius: '6px', border: '1px solid #ccc', fontSize: '15px' }}
+        />
         <button
-          style={{ marginTop: '18px', padding: '10px 24px', background: '#43b649', color: '#fff', border: 'none', borderRadius: '6px', cursor: 'pointer', fontSize: '16px' }}
+          style={{ marginTop: '8px', padding: '10px 24px', background: '#333', color: '#fff', border: 'none', borderRadius: '6px', cursor: 'pointer', fontSize: '16px' }}
           onClick={handlePay}
         >
-          الدفع الآن
+          Paynow
         </button>
         {showMsg && (
-          <div style={{ marginTop: '18px', color: '#43b649', fontWeight: 'bold', fontSize: '18px' }}>
-            تم الدفع بنجاح! تم إضافة الطلب إلى لوحة التحكم.
+          <div style={{ marginTop: '18px', color: '#333', fontWeight: 'bold', fontSize: '18px' }}>
+            Payment successful! The order has been added to the dashboard.
           </div>
         )}
       </div>
-      {/* عرض الطلبات في لوحة التحكم */}
-      {orders.length > 0 && (
-        <div style={{ width: '100%', maxWidth: '600px', background: '#f9f9f9', borderRadius: '12px', padding: '18px', boxShadow: '0 1px 4px rgba(0,0,0,0.08)' }}>
-          <h2 style={{ marginBottom: '16px', color: '#1976d2' }}>الطلبات في لوحة التحكم</h2>
-          {orders.map((order, idx) => (
-            <div key={idx} style={{ borderBottom: '1px solid #eee', padding: '10px 0' }}>
-              <strong>{order.title || order.name}</strong> - {order.price} $
-            </div>
-          ))}
         </div>
-      )}
-    </div>
   );
 };
 
