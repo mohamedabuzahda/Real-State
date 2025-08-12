@@ -1,6 +1,10 @@
 import React, { useEffect, useState } from 'react';
 
 const Cart = () => {
+  const handleDelete = () => {
+    localStorage.removeItem('cartItem');
+    setCartItem(null);
+  };
   const [cartItem, setCartItem] = useState(null);
 
   useEffect(() => {
@@ -31,6 +35,12 @@ const Cart = () => {
           onClick={() => window.location.href = '/order'}
         >
           Proceed to Checkout
+        </button>
+        <button
+          style={{ marginTop: '12px', padding: '8px 20px', background: '#d32f2f', color: '#fff', border: 'none', borderRadius: '6px', cursor: 'pointer', fontSize: '15px' }}
+          onClick={handleDelete}
+        >
+          Delete
         </button>
       </div>
     </div>
