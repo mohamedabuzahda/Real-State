@@ -27,7 +27,6 @@ const Detailsvilla = () => {
   const { id } = useParams();
   const navigate = useNavigate();
   const [activeImage, setActiveImage] = useState(0);
-  const [isFavorite, setIsFavorite] = useState(false);
 
   // Mock data for the specific villa
   const villa = {
@@ -116,16 +115,12 @@ const Detailsvilla = () => {
     setActiveImage(index);
   };
 
-  const toggleFavorite = () => {
-    setIsFavorite(!isFavorite);
-  };
-
   return (
     <div className={styles.details}>
       {/* Header */}
       <div className={styles["details-header"]}>
         <button
-          className={styles["btn-17 back-btn"]}
+          className={styles["btn-17"]}
           onClick={() => navigate("/villa")}
         >
           <span className={styles["text-container"]}>
@@ -134,14 +129,6 @@ const Detailsvilla = () => {
             </span>
           </span>
         </button>
-        <div className={styles["header-actions"]}>
-          <button className={styles["action-btn"]} onClick={toggleFavorite}>
-            <FaHeart className={isFavorite ? styles.favorite : ""} />
-          </button>
-          <button className={styles["action-btn"]}>
-            <FaShare />
-          </button>
-        </div>
       </div>
 
       {/* Hero Section */}
@@ -368,19 +355,32 @@ const Detailsvilla = () => {
           {/* Quick Actions */}
           <div className={styles["quick-actions"]}>
             <button
-              className={styles["btn-17 action-button primary"]}
+              className={styles["btn-17"]}
+              type="submit"
               onClick={() => {
                 localStorage.setItem("cartItem", JSON.stringify(villa));
                 navigate("/cart");
               }}
             >
-              <FaShoppingCart /> Add to Cart
+              <span className={styles["text-container"]}>
+                <div className={styles.text}>
+                  <FaShoppingCart /> Add to Cart
+                </div>
+              </span>
             </button>
-            <button className={styles["btn-17 action-button secondary"]}>
-              <FaPhone /> Call Agent
+            <button className={styles["btn-17"]} type="submit">
+              <span className={styles["text-container"]}>
+                <div className={styles.text}>
+                  <FaPhone /> Call Agent
+                </div>
+              </span>
             </button>
-            <button className={styles["btn-17 action-button secondary"]}>
-              <FaEnvelope /> Send Message
+            <button className={styles["btn-17"]} type="submit">
+              <span className={styles["text-container"]}>
+                <div className={styles.text}>
+                  <FaEnvelope /> Send Message
+                </div>
+              </span>
             </button>
           </div>
         </div>

@@ -28,7 +28,6 @@ const Detailsdepartment = () => {
   const { id } = useParams();
   const navigate = useNavigate();
   const [activeImage, setActiveImage] = useState(0);
-  const [isFavorite, setIsFavorite] = useState(false);
 
   // Mock data for the specific property
   const property = {
@@ -108,11 +107,6 @@ const Detailsdepartment = () => {
     setActiveImage(index);
   };
 
-  const toggleFavorite = () => {
-    setIsFavorite(!isFavorite);
-  };
-
-  
   return (
     <div className={styles["details"]}>
       {/* Header */}
@@ -122,19 +116,11 @@ const Detailsdepartment = () => {
           onClick={() => navigate("/department")}
         >
           <span className={styles["text-container"]}>
-            <span className={styles["text"]}>
-              <FaArrowLeft /> Back to Properties
+            <span className={styles.text}>
+              <FaArrowLeft /> Back to Aepartments
             </span>
           </span>
         </button>
-        <div className={styles["header-actions"]}>
-          <button className={styles["action-btn"]} onClick={toggleFavorite}>
-            <FaHeart className={isFavorite ? styles.favorite : ""} />
-          </button>
-          <button className={styles["action-btn"]}>
-            <FaShare />
-          </button>
-        </div>
       </div>
 
       {/* Hero Section */}
@@ -368,18 +354,31 @@ const Detailsdepartment = () => {
           <div className={styles["quick-actions"]}>
             <button
               className={styles["btn-17"]}
+              type="submit"
               onClick={() => {
                 localStorage.setItem("cartItem", JSON.stringify(property));
                 navigate("/cart");
               }}
             >
-              <FaShoppingCart /> Add to Cart
+              <span className={styles["text-container"]}>
+                <div className={styles.text}>
+                  <FaShoppingCart /> Add to Cart
+                </div>
+              </span>
             </button>
-            <button className={styles["btn-17"]} action-button secondary>
-              <FaPhone /> Call Agent
+            <button className={styles["btn-17"]} type="submit">
+              <span className={styles["text-container"]}>
+                <div className={styles.text}>
+                  <FaPhone /> Call Agent
+                </div>
+              </span>
             </button>
-            <button className={styles["btn-17"]} action-button secondary>
-              <FaEnvelope /> Send Message
+            <button className={styles["btn-17"]} type="submit">
+              <span className={styles["text-container"]}>
+                <div className={styles.text}>
+                  <FaEnvelope /> Send Message
+                </div>
+              </span>
             </button>
           </div>
         </div>

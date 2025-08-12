@@ -5,14 +5,49 @@ import { FaLinkedin, FaGithub } from "react-icons/fa";
 
 const Team = () => {
   const teamMembers = [
-    { name: "member1", role: "Computer Engineer", img: karamImg, linkedin: "#", github: "#" },
-    { name: "Abdalkarim Suhail", role: "Computer Engineer", img: karamImg, linkedin: "https://www.linkedin.com/in/abdalkarim-suhail-500502277/", github: "https://github.com/AbdSarabi" },
-    { name: "member3", role: "Computer Engineer", img: karamImg, linkedin: "#", github: "#" },
-    { name: "A4", role: "Computer Engineer", img: karamImg, linkedin: "#", github: "#" },
-    { name: "5", role: "Computer Engineer", img: karamImg, linkedin: "#", github: "#" },
-    { name: "6", role: "Computer Engineer", img: karamImg, linkedin: "#", github: "#" },
+    {
+      name: "member1",
+      role: "Computer Engineer",
+      img: karamImg,
+      linkedin: "#",
+      github: "#",
+    },
+    {
+      name: "Abdalkarim Suhail",
+      role: "Computer Engineer",
+      img: karamImg,
+      linkedin: "https://www.linkedin.com/in/abdalkarim-suhail-500502277/",
+      github: "https://github.com/AbdSarabi",
+    },
+    {
+      name: "member3",
+      role: "Computer Engineer",
+      img: karamImg,
+      linkedin: "#",
+      github: "#",
+    },
+    {
+      name: "A4",
+      role: "Computer Engineer",
+      img: karamImg,
+      linkedin: "#",
+      github: "#",
+    },
+    {
+      name: "5",
+      role: "Computer Engineer",
+      img: karamImg,
+      linkedin: "#",
+      github: "#",
+    },
+    {
+      name: "6",
+      role: "Computer Engineer",
+      img: karamImg,
+      linkedin: "#",
+      github: "#",
+    },
   ];
- 
 
   return (
     <section className="team-section">
