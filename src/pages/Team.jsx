@@ -1,42 +1,46 @@
 import React from "react";
 import "../style/Team.css";
 import karamImg from "../images/karam.png";
+import farg from "../images/WhatsApp Image 2025-08-12 at 18.32.01_b282426f.jpg";
+import atta from "../images/WhatsApp Image 2025-08-12 at 18.42.28_72f985c0.jpg";
+import hamza from "../images/WhatsApp Image 2025-08-12 at 18.31.39_d74146cc.jpg";
+import mohamed from "../images/WhatsApp Image 2024-12-19 at 23.02.45_ac87aae6.jpg";
 import { FaLinkedin, FaGithub } from "react-icons/fa";
 
 const Team = () => {
   const teamMembers = [
     {
-      name: "member1",
-      role: "Computer Engineer",
-      img: karamImg,
-      linkedin: "#",
-      github: "#",
-    },
-    {
-      name: "Abdalkarim Suhail",
+      name: "Abdelkareem Suhail",
       role: "Computer Engineer",
       img: karamImg,
       linkedin: "https://www.linkedin.com/in/abdalkarim-suhail-500502277/",
       github: "https://github.com/AbdSarabi",
     },
     {
-      name: "member3",
+      name: "Farag Mohammed Sherif",
       role: "Computer Engineer",
-      img: karamImg,
+      img: farg,
       linkedin: "#",
       github: "#",
     },
     {
-      name: "A4",
+      name: "Mohamed Atta",
       role: "Computer Engineer",
-      img: karamImg,
+      img: atta,
       linkedin: "#",
       github: "#",
     },
     {
-      name: "5",
+      name: "Hazem Mahmoud Al-Melli",
       role: "Computer Engineer",
-      img: karamImg,
+      img: hamza,
+      linkedin: "https://www.linkedin.com/in/hazem-al-melli-a0a0992a5/",
+      github: "https://github.com/HazemAlMili",
+    },
+    {
+      name: "Mohamed Osama Abuzahda",
+      role: "Computer Engineer",
+      img: mohamed,
       linkedin: "#",
       github: "#",
     },
