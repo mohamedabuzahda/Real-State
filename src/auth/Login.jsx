@@ -1,46 +1,59 @@
-import { useState } from 'react';
+import { useState } from "react";
 import { FaFacebook } from "react-icons/fa6";
 import { FcGoogle } from "react-icons/fc";
 import { GrLinkedin } from "react-icons/gr";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import Cookies from "universal-cookie";
+import axios from "axios";
 import "../style/Login.css";
 
-const Login = () => {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+export default function Login() {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
   const [errorMsg, setErrorMsg] = useState("");
+  const [loading, setLoading] = useState(false);
 
-  const handleSubmit = (e) => {
+  const navigate = useNavigate();
+  const cookies = new Cookies();
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
     // Regex patterns
     const emailRegex = /^[\w-.]+@([\w-]+\.)+[\w-]{2,4}$/;
-    const passwordRegex = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d!@#$%^&*]{6,}$/; // 6 أحرف على الأقل وحرف ورقم
 
     if (!email || !password) {
-      setErrorMsg('جميع الحقول مطلوبة');
+      setErrorMsg("جميع الحقول مطلوبة");
       return;
     }
     if (!emailRegex.test(email)) {
-      setErrorMsg('يرجى إدخال بريد إلكتروني صحيح');
+      setErrorMsg("يرجى إدخال بريد إلكتروني صحيح");
       return;
     }
-    if (!passwordRegex.test(password)) {
-      setErrorMsg('كلمة المرور يجب أن تحتوي على 6 أحرف على الأقل وحرف ورقم');
-      return;
-    }
-
     setErrorMsg("");
-    // تحقق من بيانات المستخدم
-    const user = JSON.parse(localStorage.getItem('user'));
-    if (!user || user.email !== email || user.password !== password) {
-      setErrorMsg('بيانات الدخول غير صحيحة أو لا يوجد حساب مسجل');
-      return;
+    setLoading(true);
+
+    try {
+      const res = await axios.post("http://localhost:5000/api/signin", {
+        email,
+        password,
+      });
+
+      // Store token and user type in cookies
+      cookies.set("Bearer", res.data.token);
+      cookies.set("Type", res.data.type);
+
+      setLoading(false);
+      navigate("/");
+    } catch (err) {
+      console.error(err);
+      setLoading(false);
+      if (err.response && (err.response.status === 400 || err.response.status === 401)) {
+        setErrorMsg("بيانات الدخول غير صحيحة");
+      } else {
+        setErrorMsg("حدث خطأ أثناء تسجيل الدخول");
+      }
     }
-    // تفعيل الدخول
-    localStorage.setItem('isAuth', 'true');
-    const prevPage = localStorage.getItem('prevPage') || '/';
-    window.location.href = prevPage;
   };
 
   return (
@@ -50,7 +63,14 @@ const Login = () => {
           <h2 className="login-title">Welcome back to AQAR!</h2>
           <p className="login-subtitle">Sign in to continue your experience.</p>
           {errorMsg && (
-            <div style={{color: 'red', marginBottom: '12px', fontWeight: 'bold', textAlign: 'center'}}>
+            <div
+              style={{
+                color: "red",
+                marginBottom: "12px",
+                fontWeight: "bold",
+                textAlign: "center",
+              }}
+            >
               خطأ فى بياناتك: {errorMsg}
             </div>
           )}
@@ -58,7 +78,6 @@ const Login = () => {
             <div className="login-input-group">
               <input
                 type="email"
-                id="loginEmail"
                 className="login-input"
                 placeholder="Email"
                 required
@@ -69,7 +88,6 @@ const Login = () => {
             <div className="login-input-group">
               <input
                 type="password"
-                id="loginPassword"
                 className="login-input"
                 placeholder="Password"
                 required
@@ -77,22 +95,18 @@ const Login = () => {
                 onChange={(e) => setPassword(e.target.value)}
               />
             </div>
-            <button type="submit" className="login-btn">Sign in</button>
+            <button type="submit" className="login-btn">
+              Sign in
+            </button>
           </form>
-          <div className="login-or">or sign in with</div>
-          <div className="login-socials">
-            <button className="login-social-btn fb" type="button"><FaFacebook /></button>
-            <button className="login-social-btn google" type="button"><FcGoogle /></button>
-            <button className="login-social-btn linkedin" type="button"><GrLinkedin /></button>
-          </div>
           <div className="mt-3 text-center">
             <span>Don't have an account? </span>
-            <Link to="/register" className="login-link">Register</Link>
+            <Link to="/register" className="login-link">
+              Register
+            </Link>
           </div>
         </div>
       </div>
-    </div>
-  );
-};
-
-export default Login;
+    </div>
+  );
+}
