@@ -24,14 +24,14 @@ const Team = () => {
       github: "#",
     },
     {
-      name: "Mohamed Atta",
+      name: "Hazem Mahmoud Al-Melli",
       role: "Computer Engineer",
       img: atta,
       linkedin: "#",
       github: "#",
     },
     {
-      name: "Hazem Mahmoud Al-Melli",
+      name: "Mohamed Atta ",
       role: "Computer Engineer",
       img: hamza,
       linkedin: "https://www.linkedin.com/in/hazem-al-melli-a0a0992a5/",
