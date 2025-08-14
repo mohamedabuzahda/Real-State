@@ -1,10 +1,10 @@
 import React from "react";
 import "../style/Team.css";
 import karamImg from "../images/karam.png";
-import farg from "../images/WhatsApp Image 2025-08-12 at 18.32.01_b282426f.jpg";
-import hazem from "../images/WhatsApp Image 2025-08-12 at 18.42.28_72f985c0.jpg";
-import atta from "../images/WhatsApp Image 2025-08-12 at 18.31.39_d74146cc.jpg";
-import mohamed from "../images/WhatsApp Image 2024-12-19 at 23.02.45_ac87aae6.jpg";
+import farg from "../images/faragmohamed.png";
+import hazem from "../images/hazemmahmoud.png";
+import atta from "../images/mohamedatta.png";
+import mohamed from "../images/mohamedabozahda.png";
 import { FaLinkedin, FaGithub } from "react-icons/fa";
 
 const Team = () => {
