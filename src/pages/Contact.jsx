@@ -63,6 +63,7 @@ const Contact = () => {
       </div>
       <div className="form-container">
         <form onSubmit={handleSubmit} id="contact-form">
+          <h1>Get in Touch</h1>
           <div className="form-row">
             <div className="form-group">
               <label htmlFor="name">Name </label>
@@ -116,7 +117,7 @@ const Contact = () => {
           </div>
         </form>
       </div>
-      <hr className="hr2" />
+      <br className="hr2" />
     </div>
   );
 };

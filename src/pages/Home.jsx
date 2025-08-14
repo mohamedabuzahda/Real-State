@@ -39,7 +39,7 @@ export default function Home() {
     <div className="home">
       <div className="landing">
         <h1>Representing the world’s finest real estate</h1>
-        <Link to="/properties">
+        <Link to="/About">
           <button className="btn-17">
             <span className="text-container">
               <span className="text">About Us</span>
@@ -57,12 +57,12 @@ export default function Home() {
         </p>
       </div>
       <div className="home-properties">
-        <Link to="/properties" className="project">
+        <Link to="/Villa" className="project">
           <img src={villas1} alt="Property 1" />
           <h1 className="animated-title" id="text-1">
             {animateText(text1)}
           </h1>
-          <Link to="/properties">
+          <Link to="/Villa">
             <button className="btn-17">
               <span className="text-container">
                 <span className="text">View</span>
@@ -70,10 +70,10 @@ export default function Home() {
             </button>
           </Link>
         </Link>
-        <Link to="/properties" className="project">
+        <Link to="/Department" className="project">
           <img src={apartments1} alt="Property 1" />
           <h1>{animateText(text2)}</h1>
-          <Link to="/properties">
+          <Link to="/Department">
             <button className="btn-17">
               <span className="text-container">
                 <span className="text">View</span>
@@ -81,10 +81,10 @@ export default function Home() {
             </button>
           </Link>
         </Link>
-        <Link to="/properties" className="project">
+        <Link to="/Department" className="project">
           <img src={apartments2} alt="Property 1" />
           <h1>{animateText(text3)}</h1>
-          <Link to="/properties">
+          <Link to="/Department">
             <button className="btn-17">
               <span className="text-container">
                 <span className="text">View</span>
@@ -92,10 +92,10 @@ export default function Home() {
             </button>
           </Link>
         </Link>
-        <Link to="/properties" className="project">
+        <Link to="/Villa" className="project">
           <img src={villas2} alt="Property 1" />
           <h1>{animateText(text4)}</h1>
-          <Link to="/properties">
+          <Link to="/Villa">
             <button className="btn-17">
               <span className="text-container">
                 <span className="text">View</span>
@@ -105,7 +105,7 @@ export default function Home() {
         </Link>
         <div className="more-container">
           <span></span>{" "}
-          <Link to="/properties" className="more">
+          <Link to="/Villa" className="more">
             see more Projects
           </Link>
         </div>

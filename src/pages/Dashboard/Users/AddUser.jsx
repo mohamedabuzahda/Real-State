@@ -40,7 +40,7 @@ export default function SingUpPage() {
       <form action="" className="logForm">
         <h3>Add New User</h3>
 
-        <label htmlFor="name" className="white">
+        <label htmlFor="name">
           Name
         </label>
         <input
@@ -54,7 +54,7 @@ export default function SingUpPage() {
           <p className="errorMessage">Your Name is require</p>
         )}
 
-        <label htmlFor="email" className="white">
+        <label htmlFor="email">
           E-mail
         </label>
         <input
@@ -71,7 +71,7 @@ export default function SingUpPage() {
           <p className="errorMessage">This Email is already been taken</p>
         )}
 
-        <label htmlFor="password" className="white">
+        <label htmlFor="password">
           Password
         </label>
         <input
@@ -85,7 +85,7 @@ export default function SingUpPage() {
           <p className="errorMessage">Password must be more than 8 character</p>
         )}
 
-        <label htmlFor="confirmPassword" className="white">
+        <label htmlFor="confirmPassword">
           Confirm Password
         </label>
         <input

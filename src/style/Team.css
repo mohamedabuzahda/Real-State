@@ -1,8 +1,6 @@
 .team-section {
   text-align: center;
   padding: 60px 20px;
-
-  
   background: linear-gradient(270deg, #ffffff, #898787, #ededed, #bfbaba, #ffffff);
   background-size: 600% 600%;
   animation: backgroundMove 12s ease infinite;

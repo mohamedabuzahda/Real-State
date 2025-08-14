@@ -47,10 +47,16 @@
 #contact-form {
   width: 100%;
   max-width: 600px;
-  margin: 0 auto;
+  margin: 100px auto;
   padding: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
+}
+#contact-form h1 {
+  margin-bottom: 20px;
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
 }
 .header-content {
   text-align: center;
@@ -137,9 +143,3 @@ button[type="submit"] {
   letter-spacing: 1px;
 }
 
-.hr2 {
-  color: #323232;
-  width: 80%;
-  margin-bottom: 3cm;
-  margin-top: 3cm;
-}

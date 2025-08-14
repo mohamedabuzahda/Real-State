@@ -136,7 +136,7 @@ const Department = () => {
     <div className={styles.department}>
       {/* Hero Section */}
       <div className={styles.landing}>
-        <h1>Discover Your Perfect Property</h1>
+        <h1>Discover Your Perfect Apartments</h1>
         <p>Explore our curated collection of premium real estate</p>
       </div>
 
