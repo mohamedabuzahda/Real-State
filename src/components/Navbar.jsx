@@ -43,12 +43,13 @@ const Navbar = () => {
               About
             </Link>
           </li>
-          <li>
-            <Link to="/department" onClick={handleNavClick}>
-              Apartments
+          
+           <li>
+            <Link to="/team" onClick={handleNavClick}>
+              Team
             </Link>
           </li>
-
+          
           <li>
             <Link to="/villa" onClick={handleNavClick}>
               Villas
@@ -60,8 +61,8 @@ const Navbar = () => {
             </Link>
           </li>
           <li>
-            <Link to="/team" onClick={handleNavClick}>
-              Team
+            <Link to="/department" onClick={handleNavClick}>
+              Apartments
             </Link>
           </li>
           <li>
