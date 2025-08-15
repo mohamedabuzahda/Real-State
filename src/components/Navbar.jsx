@@ -62,7 +62,7 @@ const Navbar = () => {
           </li>
           <li>
             <Link to="/department" onClick={handleNavClick}>
-              Apartments
+              Aparts
             </Link>
           </li>
           <li>
