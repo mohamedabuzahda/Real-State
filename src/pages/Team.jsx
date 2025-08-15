@@ -11,7 +11,7 @@ import { FaLinkedin, FaGithub } from "react-icons/fa";
 const Team = () => {
   const teamMembers = [
     {
-      name: "Abdelkareem Suhail",
+      name: "Abdalkarim Suhail",
       role: "Computer Engineer",
       img: karamImg,
       linkedin: "https://www.linkedin.com/in/abdalkarim-suhail-500502277/",
