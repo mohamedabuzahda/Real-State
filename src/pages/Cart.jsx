@@ -15,11 +15,12 @@ const Cart = () => {
   }, []);
 
   if (!cartItem) {
-    return <div>No items found</div>;
+    return <h3 style={{ fontSize: '44px', textAlign: 'center', margin: '200px' }}>No items found</h3>;
+
   }
 
   return (
-    <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', minHeight: '60vh' }}>
+    <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', minHeight: '60vh',margin:'30px 0' }}>
       <div style={{ boxShadow: '0 2px 8px rgba(0,0,0,0.15)', borderRadius: '12px', padding: '24px', maxWidth: '400px', background: '#fff', textAlign: 'center' }}>
         <img
           src={cartItem.mainImage}
@@ -27,7 +28,7 @@ const Cart = () => {
           style={{ width: '100%', height: '220px', objectFit: 'cover', borderRadius: '8px', marginBottom: '16px' }}
         />
         <h3 style={{ marginBottom: '8px' }}>{cartItem.title || cartItem.name}</h3>
-        <p style={{ fontWeight: 'bold', color: '#1976d2', marginBottom: '8px' }}>
+        <p style={{ fontWeight: 'bold', color: '#1976d2', margin: '15px 0'}}>
           Price: {cartItem.price} $
         </p>
         <button
@@ -37,7 +38,7 @@ const Cart = () => {
           Proceed to Checkout
         </button>
         <button
-          style={{ marginTop: '12px', padding: '8px 20px', background: '#d32f2f', color: '#fff', border: 'none', borderRadius: '6px', cursor: 'pointer', fontSize: '15px' }}
+          style={{ margin: '15px auto', padding: '8px 20px', background: '#d32f2f', color: '#fff', border: 'none', borderRadius: '6px',display: 'flex', justifyContent: 'center', alignItems: 'center' , cursor: 'pointer', fontSize: '15px' }}
           onClick={handleDelete}
         >
           Delete

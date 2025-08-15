@@ -185,7 +185,13 @@ const Department = () => {
             </select>
           </div>
 
-          <button className={styles["btn-17"]}>
+          <button 
+            className={styles["btn-17"]} 
+            onClick={() => {
+              setPriceRange("all");
+              setBedrooms("all");
+            }}
+          >
             <span className={styles["text-container"]}>
               <span className={styles["clear-filters"]}>
                 <div className={styles.text}>Clear Filters</div>

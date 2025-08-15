@@ -68,13 +68,13 @@ const Detailsdepartment = () => {
       { name: "Security System", icon: FaShieldAlt, available: true },
     ],
     agent: {
-      name: "Sarah Johnson",
-      phone: "+1 (555) 123-4567",
-      email: "sarah.johnson@realestate.com",
+      name: "John Doe Rodriguez",
+      phone: "+1 (555) 987-6543",
+      email: "john.doe@luxuryrealestate.com",
       image:
-        "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=150&h=150&fit=crop&crop=face",
+        "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face",
       rating: 4.9,
-      properties: 45,
+      properties: 67,
     },
     nearbyPlaces: [
       { name: "Downtown Mall", distance: "0.2 km", type: "Shopping" },
@@ -142,7 +142,6 @@ const Detailsdepartment = () => {
         <h1 className={styles["section-title"]}>Property Overview</h1>
         <p>{property.description}</p>
       </div>
-
       {/* Main Content */}
       <div className={styles["details-content"]}>
         {/* Image Gallery */}
@@ -369,14 +368,18 @@ const Detailsdepartment = () => {
             <button className={styles["btn-17"]} type="submit">
               <span className={styles["text-container"]}>
                 <div className={styles.text}>
-                  <FaPhone /> Call Agent
+                  <a href={`tel:${property.agent.phone}`}>
+                    <FaPhone /> Call Agent
+                  </a>
                 </div>
               </span>
             </button>
             <button className={styles["btn-17"]} type="submit">
               <span className={styles["text-container"]}>
                 <div className={styles.text}>
-                  <FaEnvelope /> Send Message
+                  <a href={`mailto:${property.agent.email}`}>
+                    <FaEnvelope /> Send Message
+                  </a>
                 </div>
               </span>
             </button>

@@ -7,6 +7,7 @@ const Footer = () => {
   return (
     <div>
       <footer className={style.footer}>
+          <h3>The World's Finest Real Estate</h3>
         <ul>
           <li>
             <Link to="/about">About</Link>
@@ -14,7 +15,6 @@ const Footer = () => {
           <li>
             <Link to="/contact">Contact</Link>
           </li>
-          <h3>The World's Finest Real Estate</h3>
           <li>
             <Link to="/team">Team</Link>
           </li>
