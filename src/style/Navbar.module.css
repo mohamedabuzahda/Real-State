@@ -92,7 +92,7 @@ img {
   .logos {
     display: block;
     text-align: center;
-    /* margin-left: 100px; */
+
   }
 
   .logo {
@@ -108,11 +108,8 @@ img {
     position: fixed;
     top: 0;
     left: 100%;
-    /* Can we use delete this */
     width: 70%;
-    /* Can we use 100%, that's better */
-    height: 75vh;
-    /* Can we use 100vh */
+    height: 100vh;
     background-color: #000;
     padding-top: 80px;
     transition: all 0.5s ease;
