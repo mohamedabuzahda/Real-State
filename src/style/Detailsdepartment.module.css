@@ -15,45 +15,20 @@
         color: var(--c-2);
     }
 
-    .back-btn {
-        border: 2px solid var(--c-2) !important;
-        color: var(--c-1);
-        font-size: 1rem;
-        font-weight: 600;
+    .details-header .btn-17 {
+        background: transparent;
+        border: 2px solid var(--c-2);
         padding: 10px 20px;
-        border-radius: 5px;
+        height: 100%;
+        cursor: pointer;
         transition: all 0.3s ease;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-    }
+        color: var(--c-2);
 
-    .back-btn:hover {
-        background-color: var(--c-2) !important;
-        color: var(--c-1) !important;
     }
 
     .header-actions {
         display: flex;
         gap: 15px;
-    }
-
-    .action-btn {
-        background: transparent;
-        border: 2px solid var(--c-2);
-        padding: 12px;
-        border-radius: 8px;
-        cursor: pointer;
-        transition: all 0.3s ease;
-        color: var(--c-2);
-    }
-
-    .action-btn:hover {
-        background: var(--c-2);
-        color: var(--c-1);
-    }
-
-    .action-btn .favorite {
-        color: #e74c3c;
     }
 
     /* Landing Section */
@@ -783,9 +758,9 @@
 
 .btn-17:after,
 .btn-17:before {
+    content: "";
     --skew: 0.2;
     background: #fff;
-    content: "";
     display: block;
     height: 102%;
     left: calc(-50% - 50% * var(--skew));
@@ -794,8 +769,7 @@
     top: -103%;
     transform: skew(calc(150deg * var(--skew))) translateY(var(--progress, 0));
     transition: transform 0.2s ease;
-    width: 102%;
-
+    width: 100%;
 }
 
 .btn-17:after {
@@ -836,12 +810,27 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 100%;
+    margin: 0px auto;
     gap: 20px;
+    color: white;
+    mix-blend-mode: difference;
+}
+
+.quick-actions span .text a,
+.details-header span .text a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    color: white;
+    mix-blend-mode: difference;
 }
 
 .quick-actions span .text:hover,
 .details-header span .text:hover {
     animation: move-up-alternate 0.3s forwards;
+    width: 100%;
 }
 
 @keyframes move-up-alternate {

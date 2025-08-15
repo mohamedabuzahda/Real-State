@@ -4,7 +4,7 @@ import { FcGoogle } from "react-icons/fc";
 import { GrLinkedin } from "react-icons/gr";
 import { Link, useNavigate } from "react-router-dom";
 import Cookies from "universal-cookie";
-import axios from "axios";// تأكد أن المسار صحيح
+import axios from "axios"; // تأكد أن المسار صحيح
 import "../style/Register.css";
 
 const Register = () => {
@@ -79,7 +79,7 @@ const Register = () => {
                 onChange={(e) => setName(e.target.value)}
               />
               {name.length < 3 && accept && (
-                <p className="errorMessage">
+                <p className="errorMessage" style={{ color: "red" }}>
                   Your name must be at least 3 characters
                 </p>
               )}
@@ -96,10 +96,14 @@ const Register = () => {
                 onChange={(e) => setEmail(e.target.value)}
               />
               {email === "" && accept && (
-                <p className="errorMessage">Email is required</p>
+                <p className="errorMessage" style={{ color: "red" }}>
+                  Email is required
+                </p>
               )}
               {emailError && (
-                <p className="errorMessage">This email is already taken</p>
+                <p className="errorMessage" style={{ color: "red" }}>
+                  This email is already taken
+                </p>
               )}
             </div>
 
@@ -114,7 +118,7 @@ const Register = () => {
                 onChange={(e) => setPassword(e.target.value)}
               />
               {password.length < 8 && accept && (
-                <p className="errorMessage">
+                <p className="errorMessage" style={{ color: "red" }}>
                   Password must be at least 8 characters
                 </p>
               )}
@@ -152,4 +156,4 @@ const Register = () => {
   );
 };
 
-export default Register;
+export default Register;

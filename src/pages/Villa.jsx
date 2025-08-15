@@ -144,7 +144,7 @@ const Villa = () => {
 
       {/* Summary Section */}
       <div className={styles.summary}>
-        <h1 className={styles.sectionTitle}>Premium Villa Collection</h1>
+        <h1 className={styles["section-title"]}>Premium Villa Collection</h1>
         <p>
           Experience the epitome of luxury living with our exclusive collection
           of premium villas. Each property is meticulously designed and located
@@ -185,7 +185,13 @@ const Villa = () => {
             </select>
           </div>
 
-          <button className={styles["btn-17"]}>
+          <button
+            className={styles["btn-17"]}
+            onClick={() => {
+              setPriceRange("all");
+              setBedrooms("all");
+            }}
+          >
             <span className={styles["text-container"]}>
               <span className={styles["clear-filters"]}>Clear Filters</span>
             </span>

@@ -58,7 +58,7 @@ const Contact = () => {
       <div className="text2">
         <h1>
           For a confidential discussion about your next development, please
-          contact inquiry@sprec.com
+          contact with <strong>AQAR</strong>
         </h1>
       </div>
       <div className="form-container">
@@ -74,7 +74,6 @@ const Contact = () => {
                 required
                 value={formData.name}
                 onChange={handleChange}
-                
               />
             </div>
             <div className="form-group">
